@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 let bodyParser = require('body-parser');
 
-mongoose.connect("mongodb://localhost/notes", () => {
+mongoose.connect(process.env.MONGODB_URI, () => {
     console.log("The database is running");
 });
 
